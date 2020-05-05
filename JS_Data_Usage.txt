@@ -1,0 +1,36 @@
+Welcome to Node.js v12.16.1.
+Type ".help" for more information.
+> class Point{
+... constructor(xCoord, yCoord){
+..... this.xCoord = xCoord;
+..... this.yCoord = yCoord;
+..... }
+... getX() { return this.xCoord}
+... getY() { return this.yCoord}
+...
+... shift(x,y){
+... console.log("shift by ("+ x +", "+ y +")")
+... this.xCoord = this.xCoord + x;
+... this.yCoord = this.yCoord + y;
+... }
+...
+... coords(){
+... console.log("("+ this.xCoord + ", "+ this.yCoord +")");
+... }
+... }
+undefined
+> let pt = new Point(1,4);
+> pt.coords();
+(1, 4)
+> console.log("\n");
+
+> pt.shift(5,20);
+shift by (5, 20)
+
+> pt.coords();
+(6, 24)
+
+> const used = process.memoryUsage().heapUsed / 1024 / 1024;
+
+> used
+3.61700439453125                                                                                                 
