@@ -42,3 +42,7 @@ public class Point {
         System.out.println("Memory usage of object creation: " +  memory);
     }
 }
+
+
+//Current point is: (4.0 ,7.0)
+//Memory usage of object creation: 1014576 (Bytes)
