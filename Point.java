@@ -28,18 +28,17 @@ public class Point {
 
     public static void main(String args[]) {
 
-        Runtime total = Runtime.getRuntime();
-
-        long before = total.totalMemory() - total.freeMemory();
         Point current = new Point(1, 5);
-        long after = total.totalMemory() - total.freeMemory();
         float xCoord = current.xCoord;
         float yCoord = current.yCoord;
 
         current.shiftPoint(3, 2);
         current.returnLocation();
 
-        System.out.println("Memory usage of object creation: " +  (after - before));
+        Runtime run = Runtime.getRuntime();
+        run.gc();
+        long memory = run.totalMemory() - run.freeMemory();
+
+        System.out.println("Memory usage of object creation: " +  memory);
     }
 }
-
